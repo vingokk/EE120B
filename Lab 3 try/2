@@ -1,0 +1,62 @@
+#include <avr/io.h>
+#ifdef _SIMULATE_
+#include "simAVRHeader.h"
+#endif
+
+int main(void){
+
+    DDRA = 0x00; DDRC = 0xFF;
+    PORTA = 0xFF; PORTC = 0x00;
+    while(1){
+        switch (PINA) {
+        case 1:  
+        PORTC = PORTC | 0x60;
+        break;
+        case 2:
+        PORTC = PORTC | 0x60;
+        break;
+        case 3:
+        PORTC = PORTC | 0x70;
+        break;
+        case 4:
+        PORTC = PORTC | 0x70;
+        break;
+        case 5:
+        PORTC = PORTC | 0x68;
+        break;
+        case 6:
+        PORTC = PORTC | 0x68;
+        break;
+        case 7:
+        PORTC = PORTC | 0x6C;
+        break;
+        case 8:
+        PORTC = PORTC | 0x6C;
+        break;
+        case 9:
+        PORTC = PORTC | 0x6C;
+        break;
+        case 10:
+        PORTC = PORTC | 0x6E;
+        break;
+        case 11:
+        PORTC = PORTC | 0x6E;
+        break;
+        case 12:
+        PORTC = PORTC | 0x6E;
+        break;
+        case 13:
+        PORTC = PORTC | 0x6F;
+        break;
+        case 14:
+        PORTC = PORTC | 0x6F;
+        break;
+        case 15:
+        PORTC = PORTC | 0x6F;
+        break;
+        }
+    
+    return 1;
+
+
+}
