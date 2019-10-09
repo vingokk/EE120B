@@ -22,41 +22,41 @@ int main(void){
         PORTC =  0x70;
         break;
         case 5:
-        PORTC =  0x68;
+        PORTC =  0x38;
         break;
         case 6:
-        PORTC =  0x68;
+        PORTC =  0x38;
         break;
         case 7:
-        PORTC =  0x6C;
+        PORTC =  0x3C;
         break;
         case 8:
-        PORTC =  0x6C;
+        PORTC =  0x3C;
         break;
         case 9:
-        PORTC =  0x6C;
+        PORTC =  0x3C;
         break;
         case 10:
-        PORTC =  0x6E;
+        PORTC =  0x3E;
         break;
         case 11:
-        PORTC =  0x6E;
+        PORTC =  0x3E;
         break;
         case 12:
-        PORTC =  0x6E;
+        PORTC =  0x3E;
         break;
         case 13:
-        PORTC =  0x6F;
+        PORTC =  0x3F;
         break;
         case 14:
-        PORTC =  0x6F;
+        PORTC =  0x3F;
         break;
         case 15:
-        PORTC =  0x6F;
+        PORTC =  0x3F;
         break;
         }
     
-    return 1;
+    return 0;
 
 
 }
