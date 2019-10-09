@@ -1,0 +1,75 @@
+#include <avr/io.h>
+#ifdef _SIMULATE_
+#include "simAVRHeader.h"
+#endif
+
+int main(void){
+
+    DDRA = 0x00; DDRC = 0xFF;
+    PORTA = 0xFF; PORTC = 0x00;
+    unsigned char PA4 = 0x00; 
+    unsigned char PA5= 0x00; 
+    unsigned char PA6= 0x00; 
+    
+    while(1){
+        switch (PINA & 0x0F) {
+        case 1:  
+        PORTC =  0x60;
+        break;
+        case 2:
+        PORTC =  0x60;
+        break;
+        case 3:
+        PORTC =  0x70;
+        break;
+        case 4:
+        PORTC =  0x70;
+        break;
+        case 5:
+        PORTC =  0x68;
+        break;
+        case 6:
+        PORTC =  0x68;
+        break;
+        case 7:
+        PORTC =  0x6C;
+        break;
+        case 8:
+        PORTC =  0x6C;
+        break;
+        case 9:
+        PORTC = 0x6C;
+        break;
+        case 10:
+        PORTC =  0x6E;
+        break;
+        case 11:
+        PORTC =  0x6E;
+        break;
+        case 12:
+        PORTC =  0x6E;
+        break;
+        case 13:
+        PORTC =  0x6F;
+        break;
+        case 14:
+        PORTC =  0x6F;
+        break;
+        case 15:
+        PORTC =  0x6F;
+        break;
+        }
+        		
+        PA4 = PINA & 0x10;
+        PA5 = PINA & 0x20;
+	PA6= PINA & 0x40;
+        if((PA4>>4) & (PA5>>5) & !(PA6>>6)){
+        
+	PORTC =  PORTC + 0x80;
+}
+    }
+    
+    return 0;
+
+
+}
